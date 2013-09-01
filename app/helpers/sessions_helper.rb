@@ -20,7 +20,7 @@ module SessionsHelper
   	end
 
     def current_user?(user)
-      uder == current_user
+      user == current_user
     end
 
   	def sign_out
