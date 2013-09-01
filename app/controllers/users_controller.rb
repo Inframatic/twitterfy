@@ -46,10 +46,11 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
      # Before filters
+    end
     def signed_in_user
       unless signed_in?
         store_location
-        redirect_to signin_url, notice: "Please sign in." unless
+        redirect_to signin_url, notice: "Please sign in."
       end
     end
 
